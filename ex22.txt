@@ -1,0 +1,51 @@
+puts - outputs a line with a new line
+"strings" - a string, usually a sentence of characters
+# - a hash, which is used for comments
+25.0 - a floating point number
+25 - a integer number
+#{} - used to access variables, numbers (floating point and integer) in strings
++ - addition
+- - subtraction
+< - less than
+> - greater than
+* - multiply
+/ - division
+% - modulus (remainder)
+>= - greater than or equal to
+<= - less than or equal to
+= - used to set a variable, a variable name can anything and a variable value can be anything from a string, or number
+.to_i = converts to an integer
+false = boolean value
+true = boolean value
+"." * 10 - adds 10 "."
+"hello " + "world" - string concatenation
+%{} - a formatter can be used for flexible values in a variable
+puts xyz % { } - can be used for a multi-line comment
+\n - newline character
+puts %q {} = multi line comment with no quotes
+\ - escape character
+\\ - escape to put in a back slach
+\t - tab character
+gets - reads user input
+.chomp - keeps everything on the same line
+.to_f - converts to a float number
+ARGV - takes arguments on the command line for scripts
+$stdin - used before 'gets' when arguments are sent via the command line (via ARGV)
+""" - a multiline comment
+ARGV.first - takes ONE argument from the command line
+open(argument) - opens a file
+.read - opens the file and reads it out, can be used to output a text file
+.close - closes the file, which should be the default after accessing one
+.truncate() - removes all content of the file
+'w' - accesses a file for write mode
+'r' - accesses a file for read mode
+.write - writes to the file
+.seek - move to the beginning of a file
+.readline - read just ONE line of the text file
+File - used to access, check and do many things with files
+.exist? - checking if a file exists
+def - used to initiate a function
+end - used to end a function
+function_name(argument) - how to call a function with a variable name
++= - shortened version of addition, can be done with any operators
+return - returns the value from a function to a variable
