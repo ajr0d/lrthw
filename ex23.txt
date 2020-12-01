@@ -1,0 +1,16 @@
+https://github.com/openstreetmap/openstreetmap-website/blob/master/lib/country.rb --> this is the file I picked, which I somewhat regret
+
+class - I'm not sure what this does, but I noticed it in a few .rb files at the top so I want to research it
+attr_reader - I guess this reads attributes which are set by :
+: prefix - not sure what this does, maybe accesses functions or variables?
+||= - I think is the OR operator, again need to research
+
+On line 13, countries ends with '[code]' which I'm not sure what that means
+
+There's an 'end' at the very end of the script, so I guess that means it's the complete end of the scripts
+
+The programs objective I think is to make the openstreetmap capable of calling other countries, so you can view their other map.
+
+'xml = REXML::Document.new(File.read(Rails.root.join("config/countries.xml")))' -- the most complicated line for me, but the entire program is complicated.
+
+I will continue to progress, and research and come back to this with hopefully a better understanding.
