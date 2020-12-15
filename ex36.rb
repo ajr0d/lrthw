@@ -58,4 +58,69 @@ def stage_two
   end
 end
 
+def secret_stage
+  puts "The fire speaks out to you, 'What is fact I know that you don't?"
+  puts "You ponder for a moment, before answering."
+
+  print "* "
+  choice = $stdin.gets.chomp
+
+  if choice == 'Zed Shaw Stinks'
+    puts "Correct.  I will protect you and guide you to morning."
+    stage_ten
+  else
+    puts "Incorrect.  I will not help you.  Goodbye."
+    stage_two
+  end
+end
+
+def stage_three
+  puts "The fire in the middle of your cabin is fading out."
+  puts "You are holding everything you need to go outside."
+  puts "Do you go 'outside' or 'light' your torch?"
+
+  print "* "
+  choice = $stdin.gets.chomp
+
+  if choice == 'outside'
+    puts "You don't bother lighting your torch, and go outside into the darkness."
+    puts "The fire in your cabin has faded, so it's no longer lit up."
+    puts "You step around for a bit, and hear a slight growl."
+    puts "You fall to the ground, and you know this is it."
+    dead("You are dead.")
+  elsif choice == 'light'
+    puts "You put your torch to the fading fire in your cabin."
+    puts "After a few seconds, your torch ignites."
+    puts "You now carry a source of light and warmth."
+    stage_four
+  else
+    puts "The fire fades out. You stand around, do nothing, and go crazy."
+    dead("You are dead.")
+  end
+end
+
+def stage_four
+  puts "You have an axe and a lit torch."
+  puts "Finally, you can go 'outside' or 'stay' if your really want."
+  puts "Hint: Don't stay. Why would you?"
+
+  print "* "
+  choice = $stdin.gets.chomp
+
+  if choice == 'outside'
+    puts "You head outside and mark some trees for cutting."
+    stage_five
+  elsif choice =='stay'
+    puts "You didn't listen, did you?"
+    puts "I warned you."
+    puts "You stay inside, and suddenly spontaneously combust."
+    dead("You are dead.")
+  else
+    puts "You stand around, do nothing, and go crazy."
+    dead("You are dead.")
+  end
+end
+
+
+
 stage_one
