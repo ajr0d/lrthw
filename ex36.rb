@@ -121,6 +121,54 @@ def stage_four
   end
 end
 
+def stage_five
+  puts "You are now outside."
+  puts "Your torch helps you see a few feet ahead, and you can see the entrance of the woods."
+  puts "On the outskirts, you see some thick trees worth cutting and make mental note of them."
+  puts "Suddenly, you hear a shuffle in the deep snow and a twig snap."
+  puts "You can 'approach' the marked trees for cutting, or head back 'inside'?"
 
+  print "* "
+  choice = $stdin.gets.chomp
+
+  if choice == 'approach'
+    puts "As you walk towards the woods, a beastly figure emerges from the woods"
+    puts "You gulp and realise this is it.  It charges you and mauls you."
+    dead("You are dead.")
+  elsif choice == 'inside'
+    puts "You walk inside because you forgot something important."
+    puts "You walk up to a closet, open it and grab a shotgun on a rack."
+    puts "You check the load and grab some spare ammo."
+    puts "You are now armed with a torch, axe and a shotgun.  You head outside."
+    stage_six
+  else
+    puts "You stand around in the freezing cold and eventually collapse."
+    dead("You are dead")
+  end
+end
+
+def stage_six
+  puts "You are now armed and ready. Do you 'approach' the trees or 'search' the woods?"
+
+  print "* "
+  choice = $stdin.gets.chomp
+
+  if choice == 'approach'
+    puts "You approach the trees and begin cutting."
+    puts "After a while of cutting, you decide to have a minute's rest."
+    puts "While resting, you hear something and check over your shoulder."
+    puts "As you face forward against, the beastly figure towers above you."
+    puts "The beast mauls you to death."
+    dead("You are dead.")
+  elsif choice == 'search'
+    puts "You sneak around, knee-deep in snow.  You weave in and out of trees."
+    puts "You see the beastly figure with its back turned.  You have snuck up on it."
+    stage_seven
+  else
+    puts "You stand there doing nothing, and the beastly figure notices you."
+    puts "The beast attacks you from behind."
+    dead("You are dead.")
+  end
+end
 
 stage_one
