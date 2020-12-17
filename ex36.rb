@@ -171,4 +171,82 @@ def stage_six
   end
 end
 
+def stage_seven
+  puts "With the beastly figure facing away from you, you ponder on what to do next."
+  puts "Do you 'aim' your shot or do you 'hip' fire Terminator-style?"
+
+  print "* "
+  choice = $stdin.gets.chomp
+
+  if choice == 'aim'
+    puts "You try to align the sights for a headshot."
+    puts "The cold hinders your aim, and you misfire."
+    puts "The beast is startled.  It turns and charges you."
+    dead("You are dead.")
+  elsif choice == 'hip'
+    puts "You hip fire like Charles Bronson as you march through the snow."
+    puts "Both shots hit successfully and the beast yelps."
+    puts "You reload with the spare ammo, and pull off another double-tap from the hip.  Badass stuff."
+    puts "The beast slumps in the snow.  You check for any signs of life."
+    puts "It is dead."
+    stage_eight
+  else
+    puts "You do nothing of note."
+    puts "The beast eventually smells your scent, and notices you."
+    puts "He charges over to you and beats you down."
+    dead("You are dead.")
+  end
+end
+
+def stage_eight
+  puts "After recuperating, you can either 'walk' back to the trees to finish cutting or 'search' the beast's corpse."
+
+  print "* "
+  choice = $stdin.gets.chomp
+
+  if choice == 'walk'
+    puts "You leave the corpse in the snow, and walk back to the trees."
+    stage_nine
+  elsif choice == 'search'
+    puts "The game isn't developed that far, so this is just a weird thing to do."
+    puts "The beast also doesn't have pockets.  Nor much need to carry things around."
+    puts "A pack of other beasts see you patting down their friend, and decide to mob you."
+    dead("You are dead.")
+  else
+    puts "You do nothing of note."
+    puts "A pack of beasts notice you beside their dead friend and you stood in a trance."
+    puts "These beasts lack empathy, so they charge you and kill you."
+    dead("You are dead.")
+  end
+end
+
+def stage_nine
+  puts "You cut the trees in peace, and gather enough logs to las tthe night."
+  puts "You have a choice: 'stay' outside or 'go' inside."
+  puts "Hint: I suggest you pick 'go'."
+
+  print "* "
+  choice = $stdin.gets.chomp
+
+  if choice == 'stay'
+    puts "This wasn't a trick question, and I tried to help you."
+    puts "A group of beasts who found their dead friend have gained on you."
+    puts "It wasn't hard as you just opted to stay outside oddly."
+    puts "You know what happens next."
+    dead("You are dead.")
+  elsif choice == 'go'
+    puts "You head inside with your tools and newly gained resources."
+    stage_ten
+  else
+    puts "You do nothing.  Beast friends come.  See you.  Attack."
+    dead("You are dead.")
+  end
+end
+
+def stage_ten
+  puts "You head inside, add wood to the fire and go to sleep."
+  puts "You have survived the night.  Well done!"
+  exit(0)
+end
+
 stage_one
